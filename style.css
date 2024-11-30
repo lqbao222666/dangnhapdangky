@@ -1,99 +1,65 @@
 body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
   margin: 0;
-  background: url(./image/anhdangky.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.container {
-  max-width: 400px;
-  width: 100%;
-  padding: 20px 30px;
-  margin: 20px auto;
-  background-color: transparent; /* Màu trắng cho hộp nội dung */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 3px solid #1e488f;
-  backdrop-filter: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-family: Arial, sans-serif;
 }
 
 h2 {
-  text-align: center;
-  color: #0277bd;
+  margin-bottom: 20px;
 }
 
-.form-group {
-  margin-bottom: 15px;
+.container {
+  backdrop-filter: blur(10px) brightness(0.9);
 }
 
-label {
-  display: block;
-  color: #0277bd;
-  font-weight: bold;
-  margin-bottom: 5px;
+.input-group-text {
+  font-size: 20px;
 }
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #81d4fa;
-  border-radius: 4px;
-  background-color: #e1f5fe;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  background-color: #0288d1;
-  color: white;
-  font-size: 16px;
-  border-radius: 4px;
-  cursor: pointer;
+.text-light-purple {
+  color: #d1a7f5; /* Mã màu tím sáng */
 }
 
 button:hover {
-  background-color: #0277bd; /* Màu xanh đậm hơn khi hover */
+  background-color: #0277bd;
 }
 
-.support-links {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.support-links a {
-  color: #01579b; /* Màu xanh cho liên kết hỗ trợ */
-  text-decoration: none;
-}
-
-.support-links a:hover {
+a:hover {
   text-decoration: underline;
 }
-.form-group .input-wrapper {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
 
-.input-wrapper input {
-  flex: 1;
-  padding-right: 30px;
-  padding: 8px;
-  border: 1px solid #81d4fa;
-  border-radius: 4px;
-  background-color: #e1f5fe;
-}
-
-.input-wrapper i {
+.language-toggle {
   position: absolute;
+  top: 10px;
   right: 10px;
-  font-size: 20px;
-  color: #0277bd;
+}
+/* Định dạng chung cho dropdown */
+.language-dropdown {
+  width: auto;
+  padding: 5px 10px;
+  border: 2px solid #007bff; /* Đường viền màu xanh */
+  border-radius: 8px; /* Bo góc */
+  background: linear-gradient(45deg, #ffffff, #e9ecef); /* Nền chuyển màu */
+  font-weight: bold;
+  font-size: 14px;
+  color: #007bff; /* Màu chữ xanh */
+  outline: none;
+  transition: all 0.3s ease; /* Hiệu ứng chuyển đổi */
+  cursor: pointer;
+}
+
+/* Khi di chuột vào dropdown */
+.language-dropdown:hover {
+  border-color: #0056b3; /* Đổi màu viền */
+  background: linear-gradient(45deg, #e9ecef, #ffffff); /* Đổi hướng gradient */
+  color: #0056b3; /* Đổi màu chữ */
+}
+
+/* Khi dropdown đang được chọn */
+.language-dropdown:focus {
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Hiệu ứng đổ bóng */
+}
+
+/* Tuỳ chỉnh màu sắc cho các tùy chọn */
+.language-dropdown option {
+  background-color: #f8f9fa; /* Màu nền của tùy chọn */
+  color: #007bff; /* Màu chữ */
 }
