@@ -22,13 +22,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Chuyển đổi ngôn ngữ -->
     <div class="language-toggle">
       <select id="languageSelector" class="form-select language-dropdown">
+        <!-- Lựa chọn ngôn ngữ: Tiếng Việt mặc định -->
         <option value="vi" selected>🇻🇳 Tiếng Việt</option>
+        <!-- Lựa chọn ngôn ngữ: Tiếng Anh -->
         <option value="en">🇺🇸 English</option>
       </select>
     </div>
 
+    <!-- Phần chính: khung đăng ký -->
     <div
       class="d-flex align-items-center justify-content-center vh-100"
       style="
@@ -37,12 +41,16 @@
         background-position: center;
       "
     >
+      <!-- Container chứa form đăng ký -->
       <div
         class="container bg-transparent p-4 rounded shadow border border-primary"
         style="max-width: 400px"
       >
+        <!-- Tiêu đề form -->
         <h2 class="text-center text-dark" data-lang="registerTitle">Đăng Ký</h2>
+        <!-- Form đăng ký -->
         <form id="registerForm" method="POST">
+          <!-- Trường nhập Họ và tên -->
           <div class="mb-3">
             <label
               for="fullName"
@@ -59,11 +67,13 @@
                 class="form-control bg-light border-info"
                 required
               />
+              <!-- Icon người dùng -->
               <span class="input-group-text bg-light text-info border-info">
                 <i class="bx bxs-user"></i>
               </span>
             </div>
           </div>
+          <!-- Trường nhập Email -->
           <div class="mb-3">
             <label
               for="email"
@@ -80,11 +90,13 @@
                 class="form-control bg-light border-info"
                 required
               />
+              <!-- Icon phong bì -->
               <span class="input-group-text bg-light text-info border-info">
                 <i class="bx bxs-envelope"></i>
               </span>
             </div>
           </div>
+          <!-- Trường nhập Mật khẩu -->
           <div class="mb-3">
             <label
               for="password"
@@ -101,11 +113,13 @@
                 class="form-control bg-light border-info"
                 required
               />
+              <!-- Icon ổ khóa -->
               <span class="input-group-text bg-light text-info border-info">
                 <i class="bx bxs-lock"></i>
               </span>
             </div>
           </div>
+          <!-- Trường nhập Xác nhận mật khẩu -->
           <div class="mb-3">
             <label
               for="confirm-password"
@@ -122,11 +136,13 @@
                 class="form-control bg-light border-info"
                 required
               />
+              <!-- Icon ổ khóa -->
               <span class="input-group-text bg-light text-info border-info">
                 <i class="bx bxs-lock"></i>
               </span>
             </div>
           </div>
+          <!-- Trường nhập Địa chỉ (tuỳ chọn) -->
           <div class="mb-3">
             <label
               for="address"
@@ -142,11 +158,13 @@
                 name="address"
                 class="form-control bg-light border-info"
               />
+              <!-- Icon ngôi nhà -->
               <span class="input-group-text bg-light text-info border-info">
                 <i class="bx bxs-home"></i>
               </span>
             </div>
           </div>
+          <!-- Nút Đăng ký -->
           <button
             type="submit"
             class="btn btn-primary w-100"
@@ -154,6 +172,7 @@
           >
             Đăng ký
           </button>
+          <!-- Liên kết chuyển đến Đăng nhập -->
           <div class="text-center mt-3">
             <a
               href="index.html"

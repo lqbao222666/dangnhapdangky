@@ -22,13 +22,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Chuyển đổi ngôn ngữ -->
     <div class="language-toggle">
       <select id="languageSelector" class="form-select language-dropdown">
+        <!-- Lựa chọn ngôn ngữ: Tiếng Việt mặc định -->
         <option value="vi" selected>🇻🇳 Tiếng Việt</option>
+        <!-- Lựa chọn ngôn ngữ: Tiếng Anh -->
         <option value="en">🇺🇸 English</option>
       </select>
     </div>
 
+    <!-- Phần chính: khung đăng nhập -->
     <div
       class="d-flex align-items-center justify-content-center vh-100"
       style="
@@ -37,12 +41,16 @@
         background-position: center;
       "
     >
+      <!-- Container chứa form đăng nhập -->
       <div
         class="container bg-transparent p-4 rounded shadow border border-primary"
         style="max-width: 400px"
       >
+        <!-- Tiêu đề form -->
         <h2 class="text-center text-dark" data-lang="loginTitle">Đăng Nhập</h2>
+        <!-- Bắt đầu form đăng nhập -->
         <form id="loginForm" method="POST">
+          <!-- Trường nhập Email hoặc Tên người dùng -->
           <div class="mb-3">
             <label
               for="email"
@@ -59,11 +67,13 @@
                 class="form-control bg-light border-info"
                 required
               />
+              <!-- Icon người dùng -->
               <span class="input-group-text bg-light text-info border-info">
                 <i class="bx bxs-user"></i>
               </span>
             </div>
           </div>
+          <!-- Trường nhập Mật khẩu -->
           <div class="mb-3">
             <label
               for="psw"
@@ -80,11 +90,13 @@
                 class="form-control bg-light border-info"
                 required
               />
+              <!-- Icon ổ khóa -->
               <span class="input-group-text bg-light text-info border-info">
                 <i class="bx bxs-lock"></i>
               </span>
             </div>
           </div>
+          <!-- Nút Đăng nhập -->
           <button
             type="submit"
             class="btn btn-primary w-100"
@@ -92,6 +104,7 @@
           >
             Đăng nhập
           </button>
+          <!-- Liên kết Quên mật khẩu và Đăng ký -->
           <div class="text-center mt-3">
             <a
               href="/forgot-password"
@@ -111,3 +124,4 @@
     <script src="language.js"></script>
   </body>
 </html>
+  

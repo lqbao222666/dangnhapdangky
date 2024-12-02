@@ -1,65 +1,75 @@
+/* Đặt margin về 0 và sử dụng font Arial làm mặc định */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
 
+/* Khoảng cách dưới tiêu đề chính (h2) */
 h2 {
   margin-bottom: 20px;
 }
 
+/* Container form đăng ký với hiệu ứng mờ và làm sáng */
 .container {
-  backdrop-filter: blur(10px) brightness(0.9);
+  backdrop-filter: blur(10px) brightness(0.9); /* Hiệu ứng nền mờ và làm sáng */
 }
 
+/* Kích thước biểu tượng trong input group */
 .input-group-text {
-  font-size: 20px;
+  font-size: 20px; /* Biểu tượng lớn hơn một chút */
 }
+
+/* Màu chữ tím sáng cho một số phần tử (nếu cần áp dụng) */
 .text-light-purple {
   color: #d1a7f5; /* Mã màu tím sáng */
 }
 
+/* Hiệu ứng hover cho nút bấm */
 button:hover {
-  background-color: #0277bd;
+  background-color: #0277bd; /* Đổi nền thành màu xanh đậm */
 }
 
+/* Hiệu ứng hover cho liên kết */
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Gạch chân khi di chuột */
 }
 
+/* Vị trí và định dạng của toggle chuyển ngôn ngữ */
 .language-toggle {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 10px; /* Căn trên */
+  right: 10px; /* Căn phải */
 }
-/* Định dạng chung cho dropdown */
+
+/* Định dạng chung cho dropdown ngôn ngữ */
 .language-dropdown {
-  width: auto;
-  padding: 5px 10px;
-  border: 2px solid #007bff; /* Đường viền màu xanh */
-  border-radius: 8px; /* Bo góc */
-  background: linear-gradient(45deg, #ffffff, #e9ecef); /* Nền chuyển màu */
-  font-weight: bold;
-  font-size: 14px;
-  color: #007bff; /* Màu chữ xanh */
-  outline: none;
-  transition: all 0.3s ease; /* Hiệu ứng chuyển đổi */
-  cursor: pointer;
+  width: auto; /* Độ rộng tự động */
+  padding: 5px 10px; /* Khoảng cách trong */
+  border: 2px solid #007bff; /* Đường viền màu xanh lam */
+  border-radius: 8px; /* Bo góc tròn */
+  background: linear-gradient(45deg, #ffffff, #e9ecef); /* Nền gradient sáng */
+  font-weight: bold; /* Chữ đậm */
+  font-size: 14px; /* Kích thước chữ nhỏ gọn */
+  color: #007bff; /* Màu chữ xanh lam */
+  outline: none; /* Loại bỏ đường viền mặc định khi chọn */
+  transition: all 0.3s ease; /* Hiệu ứng chuyển mượt mà */
+  cursor: pointer; /* Con trỏ dạng tay khi di chuột */
 }
 
-/* Khi di chuột vào dropdown */
+/* Hiệu ứng hover cho dropdown */
 .language-dropdown:hover {
-  border-color: #0056b3; /* Đổi màu viền */
+  border-color: #0056b3; /* Đổi màu viền thành xanh đậm hơn */
   background: linear-gradient(45deg, #e9ecef, #ffffff); /* Đổi hướng gradient */
-  color: #0056b3; /* Đổi màu chữ */
+  color: #0056b3; /* Màu chữ xanh đậm hơn */
 }
 
-/* Khi dropdown đang được chọn */
+/* Hiệu ứng khi dropdown đang được chọn */
 .language-dropdown:focus {
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Hiệu ứng đổ bóng */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Đổ bóng viền màu xanh lam */
 }
 
-/* Tuỳ chỉnh màu sắc cho các tùy chọn */
+/* Tuỳ chỉnh màu sắc cho các tùy chọn trong dropdown */
 .language-dropdown option {
   background-color: #f8f9fa; /* Màu nền của tùy chọn */
-  color: #007bff; /* Màu chữ */
+  color: #007bff; /* Màu chữ xanh lam */
 }
