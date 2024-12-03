@@ -1,0 +1,159 @@
+/* Định dạng chung */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: rgba(142, 202, 255, 0.834);
+  color: white; /* Màu nền xanh nhạt */
+}
+
+* {
+  box-sizing: border-box; /* Đảm bảo tính toán kích thước chính xác */
+}
+
+/* Header menu */
+.box-menu {
+  background-color: #3498db;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px; /* Thêm khoảng cách hai bên */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+.box-menu .logo img {
+  width: 130px; /* Kích thước logo */
+}
+
+.box-menu ul {
+  display: flex;
+  list-style: none; /* Loại bỏ dấu đầu dòng */
+  margin: 0;
+  padding: 0;
+}
+
+.box-menu ul li {
+  margin: 0 15px; /* Khoảng cách đều giữa các mục menu */
+  padding: 10px 15px; /* Tạo khoảng cách bên trong */
+}
+
+.box-menu ul li a {
+  color: white; /* Màu chữ trắng */
+  font-size: 18px; /* Tăng kích thước chữ */
+  text-decoration: none; /* Loại bỏ gạch chân */
+  transition: background-color 0.3s, color 0.3s; /* Hiệu ứng mượt */
+}
+
+.box-menu ul li.highlight:hover {
+  background-color: rgb(0, 136, 255);
+  border-radius: 3px; /* Góc bo tròn */
+}
+
+/* Hộp tìm kiếm */
+.search-input {
+  padding: 8px 12px; /* Tạo khoảng cách đều bên trong */
+  border: 2px solid #ddd; /* Viền hộp */
+  border-radius: 20px; /* Làm tròn hơn */
+  font-size: 18px; /* Kích thước chữ vừa phải */
+  width: 500px; /* Chiều rộng gọn hơn */
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color: white; /* Màu nền nút */
+  border: 2px solid #3498db; /* Viền nút */
+  border-radius: 50px; /* Hình dạng tròn */
+  cursor: pointer;
+  font-size: 18px;
+  color: #3498db;
+  transition: all 0.3s; /* Hiệu ứng hover */
+}
+
+.search-input:hover {
+  background-color: #3498db; /* Đổi màu nền khi hover */
+  color: white; /* Đổi màu chữ khi hover */
+}
+.search-button:hover {
+  background-color: #3498db; /* Đổi màu nền khi hover */
+  color: white; /* Đổi màu chữ khi hover */
+}
+
+/* Hình ảnh chính */
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Bo góc nhẹ */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Hiệu ứng đổ bóng sâu hơn */
+}
+
+/* Tiêu đề giới thiệu */
+.intro-heading {
+  text-align: center;
+  font-weight: bold;
+  margin: 30px 0 15px;
+  color: #2c3e50; /* Đổi màu chữ đậm hơn */
+  font-size: 2.5rem; /* Kích thước chữ lớn hơn */
+}
+
+.intro-paragraph {
+  text-align: left; /* Căn trái đoạn văn */
+  line-height: 1.8;
+  margin: 20px auto;
+  font-size: 25px; /* Kích thước chữ vừa đọc */
+  color: #333;
+  max-width: 80%;
+  white-space: pre-line;
+}
+
+
+/* Bốn logo */
+.four-section {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: nowrap; /* Tự xuống dòng khi không đủ chỗ */
+  gap: 5px; /* Khoảng cách giữa các logo */
+  justify-content: center; /* Căn giữa các logo */
+}
+
+.four-section .col {
+  padding: 10px;
+  flex: 1 1 calc(25% - 40px); /* Chiều rộng mỗi logo */
+  max-width: calc(25% - 40px); /* Đảm bảo không vượt quá 25% */
+  text-align: center; /* Căn giữa logo */
+}
+
+.four-section .image-container {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.four-section img {
+  width: 35%; /* Kích thước logo vừa phải */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+  transition: transform 0.3s; /* Hiệu ứng khi hover */
+}
+
+.four-section img:hover {
+  transform: scale(1.1); /* Phóng to nhẹ khi hover */
+}
+
+/* Ngôn ngữ */
+.language-toggle {
+  margin-left: auto; /* Đẩy nút chọn ngôn ngữ sang phải */
+}
+/* Footer */
+.footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap; 
+}

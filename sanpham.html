@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản Phẩm</title>
+    <!-- Bootstrap packs-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styletrangchu.css">
+    <link rel="icon" href="./images/favicon.png" type="image/png">
+    <!--Font Awesome-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <!--Hover CSS Framework-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="box-menu">
+        <ul class="d-flex align-items-center p-2">
+            <li class="logo me-auto">
+                <a href="index.html">
+                    <img src="./images/logos.png" alt="Company Logo">
+                </a>
+            <li class="search-item d-flex align-items-center">
+                <input type="text" id="search-placeholder" class="search-input form-control me-2">
+                <button class="search-button btn btn-primary">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </li>
+            <li class="highlight ms-3" id="category-item-vi">
+                <a href="sanpham.html"><i class="fa-solid fa-bars"></i> <span data-lang="itemlist">Danh Mục Sản Phẩm </span></a>
+            </li>
+            <li class="highlight ms-3" id="register-item-vi">
+                <a href="signup.html"><i class="fa-solid fa-user"></i> <span data-lang="register">Đăng Ký </span></a>
+            </li>
+            <li class="highlight ms-3" id="login-item-vi">
+                <a href="login.html"><i class="fa-regular fa-user"></i> <span data-lang="login">Đăng Nhập </span></a>
+            </li>
+            <li class="highlight ms-3">
+                <i class="fas fa-shopping-cart" onclick="openCart()" style="cursor: pointer;"></i>
+            </li>
+
+            <!-- Language Toggle -->
+            <div class="language-toggle">
+                <select id="languageSelector" class="form-select language-dropdown">
+                    <option value="vi" selected>🇻🇳 Tiếng Việt</option>
+                    <option value="en">🇺🇸 English</option>
+                </select>
+            </div>
+        </ul>
+    </header>
+    <main>
+        <!-- Thông báo toast hiện lên khi đặt hàng thành công-->
+        <div class="toast-container position-fixed top-50 start-50 translate-middle p-3" id="toast-container">
+            <div id="toast-message" class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="d-flex">
+                <div class="toast-body text-center">
+                  <!-- Thông báo sẽ hiển thị ở đây -->
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+            </div>
+        </div>
+        <div class="container pb-5">
+        <div class="container-fluid text-center mb-5 mt-5">
+            <h1><span data-lang="Title">DANH MỤC SẢN PHẨM</span></h1>
+        </div>
+        <!-- Container chứa danh mục sản phẩm -->
+        <div class="container sanpham">
+            <!-- Danh mục giấy in -->
+            <div class="block mb-5 bg-info">
+                <div class="block-header d-flex py-4">
+                    <h2 class="text-start mx-3"><i class="fa fa-copy"></i> <span data-lang="Paper">Giấy in văn phòng - giấy photo chất lượng</span></h2>
+                    <a href="#" class="text-end readmore mx-3"><span data-lang="Seemore">Xem Thêm</span><i class="fa fa-angle-right"></i></a>
+                </div>
+                <!-- Chứa các sản phẩm giấy -->
+                <div class="block-content">
+                    <!-- Paper01 -->
+                <a href="#" class="link-sp">
+                    <div class="doubleAA container d-flex py-3 hvr-sweep-to-right">
+                        <div class="frame">
+                        <img src="./images/sanpham/paper/giay-a4-double.jpg" class="img-fluid rounded shadow h-100 mx-3" width="250px"></div>
+                        <div class="info ms-5">
+                            <h3 class="sp-name">Giấy in A4 Double A 70gsm
+                                 - Thái Lan Chính Hãng (500 tờ)</h3>
+                                <a href="#" class="readmore"><span data-lang="Detail">Chi tiết</span></a></p>
+                            <div class="label">
+                                <p class="price text-center">79.000VND</p>
+                                <span class="add-cart"><span data-lang="Amount">Số Lượng:</span> <input id="paper01" type="number" max="100" min="0" value="0" size="3"/>
+                                    <button onclick="addCart('paper01')" class="btn btn-outline-primary"><i class="fa fa-shopping-cart"></i> <span data-lang="Order">Đặt Hàng</span></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Paper02 -->
+                <a href="#" class="link-sp">
+                    <div class="supreme container d-flex py-3 hvr-sweep-to-right">
+                        <div class="frame">
+                        <img src="./images/sanpham/paper/Giay-in-A4-Supreme-DL70.webp" class="img-fluid rounded shadow h-100 mx-3" width="250px"></div>
+                        <div class="info ms-5">
+                            <h3 class="sp-name">Giấy in A4 Supreme ĐL70</h3>
+                                <a href="#" class="readmore"><span data-lang="Detail">Chi tiết</span></a></p>
+                            <div class="label">
+                                <p class="price">65.000VND</p>
+                                <span class="add-cart"><span data-lang="Amount">Số Lượng:</span> <input id="paper02" type="number" max="100" min="0" value="0" size="3"/> 
+                                    <button onclick="addCart('paper02')" class="btn btn-outline-primary"><i class="fa fa-shopping-cart"></i> <span data-lang="Order">Đặt Hàng</span></button></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Paper03 -->
+                <a href="#" class="link-sp">
+                    <div class="lkplus container d-flex py-3 hvr-sweep-to-right">
+                        <div class="frame">
+                        <img src="./images/sanpham/paper/giay-a4-ik-plus-70-gsm-6703.jpg" class="img-fluid rounded shadow h-100 mx-3" width="250px"></div>
+                        <div class="info ms-5">
+                            <h3 class="sp-name">Giấy A4 IK Plus 70 gsm</h3>
+                                <a href="#" class="readmore" data-lang="Detail">Chi tiết</a></p>
+                            <div class="label">
+                                <p class="price">70.000VND</p>
+                                <span class="add-cart"><span data-lang="Amount">Số Lượng:</span> <input id="paper03" type="number" max="100" min="0" value="0" size="3"/> 
+                                    <button onclick="addCart('paper03')" class="btn btn-outline-primary"><i class="fa fa-shopping-cart"></i> <span data-lang="Order">Đặt Hàng</span></button></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                </div>
+            </div>
+            <!-- Danh mục notebook -->
+            <div class="block mb-5 bg-info">
+                <div class="block-header d-flex py-4">
+                    <h2 class="text-start mx-3"><i class="fa fa-book"></i> <span data-lang="Notebook">Sổ ghi chép - Notebook</span></h2>
+                    <a href="#" class="text-end readmore mx-3"><span data-lang="Seemore">Xem Thêm</span><i class="fa fa-angle-right"></i></a>
+                </div>
+                <!-- Chứa các sản phẩm tập vở -->
+                <div class="block-content">
+                    <!-- Notebook01 -->
+                <a href="#" class="link-sp">
+                    <div class="tapA5 container d-flex py-3 hvr-sweep-to-right">
+                        <div class="frame">
+                        <img src="./images/sanpham/notebook/tap-a5.jfif" class="img-fluid rounded shadow h-100 mx-3" width="250px"></div>
+                        <div class="info ms-5">
+                            <h3 class="sp-name">NOTEBOOK - Tập Vở, Sổ Kẻ Ngang size A5</h3>
+                                <a href="#" class="readmore"><span data-lang="Detail">Chi tiết</span></a></p>
+                            <div class="label">
+                                <p class="price">15.000VND</p>
+                                <span class="add-cart"><span data-lang="Amount">Số Lượng:</span> <input id="notebook01" type="number" max="100" min="0" value="0" size="3"/> 
+                                    <button onclick="addCart('notebook01')" class="btn btn-outline-primary"><i class="fa fa-shopping-cart"></i> <span data-lang="Order">Đặt Hàng</span></button></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Notebook02 -->
+                <a href="#" class="link-sp">
+                    <div class="200pNoteA4 container d-flex py-3 hvr-sweep-to-right">
+                        <div class="frame">
+                        <img src="./images/sanpham/notebook/noteA4-200tr.jpg" class="img-fluid rounded shadow h-100 mx-3" width="250px"></div>
+                        <div class="info ms-5">
+                            <h3 class="sp-name">Tập Notebook A4 (200 trang)</h3>
+                                <a href="#" class="readmore"><span data-lang="Detail">Chi tiết</span></a></p>
+                            <div class="label">
+                                <p class="price">10.000VND</p>
+                                <span class="add-cart"><span data-lang="Amount">Số Lượng:</span> <input id="notebook02" type="number" max="100" min="0" value="0" size="3"/> 
+                                    <button onclick="addCart('notebook02')" class="btn btn-outline-primary"><i class="fa fa-shopping-cart"></i> <span data-lang="Order">Đặt Hàng</span></button></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Notebook03 -->
+                <a href="#" class="link-sp">
+                    <div class="campus container d-flex py-3 hvr-sweep-to-right">
+                        <div class="frame">
+                        <img src="./images/sanpham/notebook/tap-campus.webp" class="img-fluid rounded shadow h-100 mx-3" width="250px"></div>
+                        <div class="info ms-5">
+                            <h3 class="sp-name">Tập sinh viên Campus Basic Notebook 120 trang 70gsm kẻ ngang dán gáy</h3>
+                                <a href="#" class="readmore"><span data-lang="Detail">Chi tiết</span></a></p>
+                            <div class="label">
+                                <p class="price">19.000VND</p>
+                                <span class="add-cart"><span data-lang="Amount">Số Lượng:</span> <input id="notebook03" type="number" max="100" min="0" value="0" size="3"/> 
+                                    <button onclick="addCart('notebook03')" class="btn btn-outline-primary"><i class="fa fa-shopping-cart"></i> <span data-lang="Order">Đặt Hàng</span></button></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                </div>
+            </div>
+            <!-- Danh mục bút mực -->
+            <div class="block mb-5 bg-info">
+                <div class="block-header d-flex py-4">
+                    <h2 class="text-start mx-3"><i class="fa fa-pen-clip"></i> <span data-lang="Pen">Bút bi, bút mực các loại</span></h2>
+                    <a href="#" class="text-end readmore mx-3"><span data-lang="Seemore">Xem Thêm</span><i class="fa fa-angle-right"></i></a>
+                </div>
+                <!-- Chứa các sản phẩm bút mực -->
+                <div class="block-content">
+                    <!-- Pen01 -->
+                <a href="#" class="link-sp">
+                    <div class="TLpen container d-flex py-3 hvr-sweep-to-right">
+                        <div class="frame">
+                        <img src="./images/sanpham/pen/thienlongTL-pen.webp" class="img-fluid rounded shadow h-100 mx-3" width="250px"></div>
+                        <div class="info ms-5">
+                            <h3 class="sp-name">Hộp 20 Bút Bi 0.5 mm Treeden - Thiên Long TL-079 - Mực Xanh</h3>
+                                <a href="#" class="readmore"><span data-lang="Detail">Chi tiết</span></a></p>
+                            <div class="label">
+                                <p class="price">64.000VND</p>
+                                <span class="add-cart"><span data-lang="Amount">Số Lượng:</span> <input id="pen01" type="number" max="100" min="0" value="0" size="3"/> 
+                                    <button onclick="addCart('pen01')" class="btn btn-outline-primary"><i class="fa fa-shopping-cart"></i> <span data-lang="Order">Đặt Hàng</span></button></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Pen02 -->
+                <a href="#" class="link-sp">
+                    <div class="OT004BU container d-flex py-3 hvr-sweep-to-right">
+                        <div class="frame">
+                        <img src="./images/sanpham/pen/OT004BU.webp" class="img-fluid rounded shadow h-100 mx-3" width="250px"></div>
+                        <div class="info ms-5">
+                            <h3 class="sp-name">Bút gel mực xanh/OT-GP004BU</h3>
+                                <a href="#" class="readmore"><span data-lang="Detail">Chi tiết</span></a></p>
+                            <div class="label">
+                                <p class="price">6.000VND</p>
+                                <span class="add-cart"><span data-lang="Amount">Số Lượng:</span> <input id="pen02" type="number" max="100" min="0" value="0" size="3"/> 
+                                    <button onclick="addCart('pen02')" class="btn btn-outline-primary"><i class="fa fa-shopping-cart"></i> <span data-lang="Order">Đặt Hàng</span></button></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!--  Pen03-->
+                <a href="#" class="link-sp">
+                    <div class="muc-nuoc container d-flex py-3 hvr-sweep-to-right">
+                        <div class="frame">
+                        <img src="./images/sanpham/pen/but-muc-nuoc.jfif" class="img-fluid rounded shadow h-100 mx-3" width="250px"></div>
+                        <div class="info ms-5">
+                            <h3 class="sp-name">Bút Mực Nước Mực Đen/Đỏ/Xanh 0.5mm 3 Màu Tùy Chọn</h3>
+                                <a href="#" class="readmore"><span data-lang="Detail">Chi tiết</span></a></p>
+                            <div class="label">
+                                <p class="price">5.000VND</p>
+                                <span class="add-cart"><span data-lang="Amount">Số Lượng:</span> <input id="pen03" type="number" max="100" min="0" value="0" size="3"/> 
+                                    <button onclick="addCart('pen03')" class="btn btn-outline-primary"><i class="fa fa-shopping-cart"></i> <span data-lang="Order">Đặt Hàng</span></button></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                </div>
+            </div>
+            <!-- Danh mục bút chì -->
+            <div class="block mb-5 bg-info">
+                <div class="block-header d-flex py-4">
+                    <h2 class="text-start mx-3"><i class="fa fa-pencil"></i> <span data-lang="Pencil">Bút chì các loại</span></h2>
+                    <a href="#" class="text-end readmore mx-3"><span data-lang="Seemore">Xem Thêm</span><i class="fa fa-angle-right"></i></a>
+                </div>
+                <!-- Chứa các sản phẩm bút chì -->
+                <div class="block-content"> 
+                    <!-- Pencil01 -->
+                <a href="#" class="link-sp">
+                    <div class="Tlpencil container d-flex py-3 hvr-sweep-to-right">
+                        <div class="frame">
+                        <img src="./images/sanpham/pencil/TLpencil.webp" class="img-fluid rounded shadow h-100 mx-3" width="250px"></div>
+                        <div class="info ms-5">
+                            <h3 class="sp-name">Bút chì gỗ Thiên Long GP-01</h3>
+                                <a href="#" class="readmore"><span data-lang="Detail">Chi tiết</span></a></p>
+                            <div class="label">
+                                <p class="price">4.500VND</p>
+                                <span class="add-cart"><span data-lang="Amount">Số Lượng:</span> <input id="pencil01" type="number" max="100" min="0" value="0" size="3"/> 
+                                    <button onclick="addCart('pencil01')" class="btn btn-outline-primary"><i class="fa fa-shopping-cart"></i> <span data-lang="Order">Đặt Hàng</span></button></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Pencil02 -->
+                <a href="#" class="link-sp">
+                    <div class="ClassMate container d-flex py-3 hvr-sweep-to-right">
+                        <div class="frame">
+                        <img src="./images/sanpham/pencil/CMpencil.jpg" class="img-fluid rounded shadow h-100 mx-3" width="250px"></div>
+                        <div class="info ms-5">
+                            <h3 class="sp-name">Hộp 12 cây Bút chì gỗ có tẩy ClassMate 2B/4B/6B</h3>
+                                <a href="#" class="readmore"><span data-lang="Detail">Chi tiết</span></a></p>
+                            <div class="label">
+                                <p class="price">30.000VND</p>
+                                <span class="add-cart"><span data-lang="Amount">Số Lượng:</span> <input id="pencil02" type="number" max="100" min="0" value="0" size="3"/> 
+                                    <button onclick="addCart('pencil02')" class="btn btn-outline-primary"><i class="fa fa-shopping-cart"></i> <span data-lang="Order">Đặt Hàng</span></button></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Pencil03 -->
+                <a href="#" class="link-sp">
+                    <div class="Marco container d-flex py-3 hvr-sweep-to-right">
+                        <div class="frame">
+                        <img src="./images/sanpham/pencil/but-chi-marco-7b.jpg" class="img-fluid rounded shadow h-100 mx-3" width="250px"></div>
+                        <div class="info ms-5">
+                            <h3 class="sp-name">Bút chì Marco đen độ cứng 7B</h3>
+                                <a href="#" class="readmore"><span data-lang="">Chi tiết</span></a></p>
+                            <div class="label">
+                                <p class="price">6.900VND</p>
+                                <span class="add-cart"><span data-lang="Amount">Số Lượng:</span> <input id="pencil03" type="number" max="100" min="0" value="0" size="3"/> 
+                                    <button onclick="addCart('pencil03')" class="btn btn-outline-primary"><i class="fa fa-shopping-cart"></i> <span data-lang="Order">Đặt Hàng</span></button></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                </div>
+            </div>
+            <!-- Danh mục các mặt hàng khác -->
+            <div class="block mb-5 bg-info">
+                <div class="block-header d-flex py-4">
+                    <h2 class="text-start mx-3"><i class="fa fa-scissors"></i> <span data-lang="Other">Băng keo - Dao - Kéo</span></h2>
+                    <a href="#" class="text-end readmore mx-3"><span data-lang="Seemore">Xem Thêm</span><i class="fa fa-angle-right"></i></a>
+                </div>
+                <!-- Chứa các sản phẩm khác -->
+                <div class="block-content">
+                    <!-- Other01 -->
+                <a href="#" class="link-sp">
+                    <div class="tape container d-flex py-3 hvr-sweep-to-right">
+                        <div class="frame">
+                        <img src="./images/sanpham/others/bang-keo-trong-opp-flexoffice.webp" class="img-fluid rounded shadow h-100 mx-3" width="250px"></div>
+                        <div class="info ms-5">
+                            <h3 class="sp-name">Băng keo trong OPP Flexoffice BKT15/FO</h3>
+                                <a href="#" class="readmore"><span data-lang="Detail">Chi tiết</span></a></p>
+                            <div class="label">
+                                <p class="price">38.700VND</p>
+                                <span class="add-cart"><span data-lang="Amount">Số Lượng:</span> <input id="other01" type="number" max="100" min="0" value="0" size="3"/> 
+                                    <button onclick="addCart('other01')" class="btn btn-outline-primary"><i class="fa fa-shopping-cart"></i> <span data-lang="Order">Đặt Hàng</span></button></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Other02 -->
+                <a href="#" class="link-sp">
+                    <div class="scissors container d-flex py-3 hvr-sweep-to-right">
+                        <div class="frame">
+                        <img src="./images/sanpham/others/keo-van-phong-so180.jpg" class="img-fluid rounded shadow h-100 mx-3" width="250px"></div>
+                        <div class="info ms-5">
+                            <h3 class="sp-name">Kéo văn phòng S-008 (SO-180)</h3>
+                                <a href="#" class="readmore"><span data-lang="Detail">Chi tiết</span></a></p>
+                            <div class="label">
+                                <p class="price">11.000VND</p>
+                                <span class="add-cart"><span data-lang="Amount">Số Lượng:</span> <input id="other02" type="number" max="100" min="0" value="0" size="3"/> 
+                                    <button onclick="addCart('other02')" class="btn btn-outline-primary"><i class="fa fa-shopping-cart"></i> <span data-lang="Order">Đặt Hàng</span></button></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <!-- Other03 -->
+                <a href="#" class="link-sp">
+                    <div class="knife container d-flex py-3 hvr-sweep-to-right ">
+                        <div class="frame">
+                        <img src="./images/sanpham/others/dao-roc-giay-deli.webp" class="img-fluid rounded shadow h-100 mx-3" width="250px"></div>
+                        <div class="info ms-5">
+                            <h3 class="sp-name">Dao rọc giấy Deli 2031 (Dao nhỏ)</h3>
+                                <a href="#" class="readmore"><span data-lang="Detail">Chi tiết</span></a></p>
+                            <div class="label">
+                                <p class="price">17.000VND</p>
+                                <span class="add-cart"><span data-lang="Amount">Số Lượng:</span> <input id="other03" type="number" max="100" min="0" value="0" size="3"/> 
+                                    <button onclick="addCart('other03')" class="btn btn-outline-primary"><i class="fa fa-shopping-cart"></i> <span data-lang="Order">Đặt Hàng</span></button></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                </div>
+            </div>
+            <!-- Xem thêm -->
+            <div class="seemore d-grid">    
+                <a href="#" class="btn btn-primary btn-block py-3"><span data-lang="Seemore" class="h4">Xem thêm</span></a>
+            </div>
+        </div>
+    </div>
+    </main>
+    <!-- Chân trang -->
+    <footer class="bg-dark text-light pt-5">
+        <div class="container">
+            <div class="row">
+                <!-- Logo và thông tin -->
+                <div class="col-md-3 mb-4">
+                    <img src="./images/logos.png" alt="Logo" class="mb-3 rounded rounded-circle" style="width: 150px;">
+                    <p data-lang="specializing">Chuyên cung cấp văn phòng phẩm chất lượng cao, giá cả hợp lý.</p>
+                </div>
+                <!-- Liên kết -->
+                <div class="col-md-3 mb-4">
+                    <h5 data-lang="lk" >Liên kết hữu ích</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none" data-lang="our">Về chúng tôi</a></li>
+                        <li><a href="#" class="text-light text-decoration-none" data-lang="item">Sản phẩm</a></li>
+                        <li><a href="#" class="text-light text-decoration-none" data-lang="lock">Chính sách bảo mật</a></li>
+                        <li><a href="#" class="text-light text-decoration-none" data-lang="contact">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <!-- Thông tin liên hệ -->
+                <div class="col-md-3 mb-4">
+                    <h5 data-lang="in4contact">Thông tin liên hệ</h5>
+                    <p>Địa chỉ: 31 Đường 3/2 Phường Xuân Khánh, Ninh Kiều, Cần Thơ</p>
+                    <p>Email: lienhe@vanphongxanh.com</p>
+                    <p>Hotline: 0987 654 321</p>
+                </div>
+                <!-- Mạng xã hội -->
+                <div class="col-md-3 mb-4">
+                    <h5 data-lang="connect-with-us">Kết nối với chúng tôi</h5>
+                    <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="#" class="text-light"><i class="fab fa-instagram fa-2x"></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center mt-3">
+                    <p data-lang="copyright">&copy; 2024 Văn phòng xanh. Tất cả quyền được bảo lưu.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="dangonngu.js"></script>
+    <script src="jscript.js"></script>
+</body>
+</html>

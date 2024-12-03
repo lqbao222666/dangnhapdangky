@@ -1,0 +1,195 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color:rgba(142, 202, 255, 0.834);
+}
+* {
+    box-sizing: border-box;
+}
+
+.box-menu {
+    background-color: #3498db;
+    width: 100%;
+    height: 170px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 300px;              
+}
+
+.box-menu .logo img {
+    width: 130px;
+    height: auto;
+}
+
+.box-menu {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    margin-top: 10px;  
+    font-family: 'Lora', serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box-menu ul {
+    display: flex;
+    list-style: none;
+    color: white;
+    font-size: 16px;
+    align-items: center;
+    margin: 0;
+}
+
+.box-menu ul li {
+    margin: 0 10px;
+    padding: 10px 15px;
+    font-size: 21px;
+}
+
+.box-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.box-menu ul li a:focus {
+    outline: none;
+    background-color: #aab7b8;
+    border-radius: 3px;
+}
+
+.box-menu ul li.highlight:hover {
+    background: #d5dbdb;
+    border-radius: 3px;
+}
+
+.search-container {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: #3498db;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.search-input {
+    padding: 8px;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    font-size: 25px;
+    width: 650px;
+    height: 50px;
+}
+
+.search-button {
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+.search-button:hover {
+    background-color: #3498db;
+}
+.box-banner {
+    width: 100%;
+    height: 100vh;  
+    position: relative;
+    overflow: hidden;
+}
+
+.list-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.list-img img {
+    position: absolute; 
+    height: 80%; 
+    top: 40%; 
+    left: 26%; 
+    transform: translate(-50%, -50%); 
+    object-fit: cover; 
+    opacity: 0;
+    animation: fade 7s infinite;  
+}
+
+
+.list-img img:nth-child(2) {
+    animation-delay: 10s;  
+}
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.intro-heading {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.intro-paragraph {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 25px;
+    line-height: 1.6;
+}
+.four-section {
+    margin-top: 40px;
+}
+.four-section .col {
+    padding: 10px;
+}
+.four-section img {
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+}
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+/* Style for centering the heading */
+.intro-heading {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+/* Style for the paragraph */
+.intro-paragraph {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 25px;
+    line-height: 1.6;
+}
+/* Style for the four sections */
+.four-section {
+    margin-top: 40px;
+}
+.four-section .col {
+    padding: 10px;
+}
+/* Reduced size for the logos */
+.four-section img {
+    width: 60%; /* Adjust the width to make the logos smaller */
+    margin: 0 auto;
+    display: block;
+}

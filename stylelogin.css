@@ -1,0 +1,184 @@
+.box-menu {
+  background-color: #3498db;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px; /* Thêm khoảng cách hai bên */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+.box-menu .logo img {
+  width: 130px; /* Kích thước logo */
+  height: 130px;
+}
+
+.box-menu ul {
+  display: flex;
+  list-style: none; /* Loại bỏ dấu đầu dòng */
+  margin: 0;
+  padding: 0;
+}
+
+.box-menu ul li {
+  margin: 0 15px; /* Khoảng cách đều giữa các mục menu */
+  padding: 10px 15px; /* Tạo khoảng cách bên trong */
+}
+
+.box-menu ul li a {
+  color: white; /* Màu chữ trắng */
+  font-size: 18px; /* Tăng kích thước chữ */
+  text-decoration: none; /* Loại bỏ gạch chân */
+  transition: background-color 0.3s, color 0.3s; /* Hiệu ứng mượt */
+}
+
+.box-menu ul li.highlight:hover {
+  background-color: rgb(0, 136, 255);
+  border-radius: 3px; /* Góc bo tròn */
+  color: #3498db; /* Đổi màu chữ khi hover */
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.box-menu {
+  color: white;
+  padding: 10px 20px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.search-item .search-input {
+  width: 200px;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.highlight a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.highlight a:hover {
+  text-decoration: underline;
+}
+
+.language-dropdown {
+  margin-left: 10px;
+  width: 150px;
+}
+
+/* Đặt margin về 0 và sử dụng font Arial làm mặc định */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Khoảng cách dưới tiêu đề chính (h2) */
+h2 {
+  margin-bottom: 20px;
+}
+
+/* Container form đăng ký với hiệu ứng mờ và làm sáng */
+.container {
+  backdrop-filter: blur(10px) brightness(0.9); /* Hiệu ứng nền mờ và làm sáng */
+}
+
+/* Kích thước biểu tượng trong input group */
+.input-group-text {
+  font-size: 20px; /* Biểu tượng lớn hơn một chút */
+}
+
+/* Màu chữ tím sáng cho một số phần tử (nếu cần áp dụng) */
+.text-light-purple {
+  color: #d1a7f5; /* Mã màu tím sáng */
+}
+
+/* Hiệu ứng hover cho nút bấm */
+button:hover {
+  background-color: #0277bd; /* Đổi nền thành màu xanh đậm */
+}
+
+/* Hiệu ứng hover cho liên kết */
+a:hover {
+  text-decoration: underline; /* Gạch chân khi di chuột */
+}
+
+/* Vị trí và định dạng của toggle chuyển ngôn ngữ */
+.language-toggle {
+  position: absolute;
+  top: 10px; /* Căn trên */
+  right: 10px; /* Căn phải */
+}
+
+/* Định dạng chung cho dropdown ngôn ngữ */
+.language-dropdown {
+  width: auto; /* Độ rộng tự động */
+  padding: 5px 10px; /* Khoảng cách trong */
+  border: 2px solid #007bff; /* Đường viền màu xanh lam */
+  border-radius: 8px; /* Bo góc tròn */
+  background: linear-gradient(45deg, #ffffff, #e9ecef); /* Nền gradient sáng */
+  font-weight: bold; /* Chữ đậm */
+  font-size: 14px; /* Kích thước chữ nhỏ gọn */
+  color: #007bff; /* Màu chữ xanh lam */
+  outline: none; /* Loại bỏ đường viền mặc định khi chọn */
+  transition: all 0.3s ease; /* Hiệu ứng chuyển mượt mà */
+  cursor: pointer; /* Con trỏ dạng tay khi di chuột */
+}
+
+/* Hiệu ứng hover cho dropdown */
+.language-dropdown:hover {
+  border-color: #0056b3; /* Đổi màu viền thành xanh đậm hơn */
+  background: linear-gradient(45deg, #e9ecef, #ffffff); /* Đổi hướng gradient */
+  color: #0056b3; /* Màu chữ xanh đậm hơn */
+}
+
+/* Hiệu ứng khi dropdown đang được chọn */
+.language-dropdown:focus {
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Đổ bóng viền màu xanh lam */
+}
+
+/* Tuỳ chỉnh màu sắc cho các tùy chọn trong dropdown */
+.language-dropdown option {
+  background-color: #f8f9fa; /* Màu nền của tùy chọn */
+  color: #007bff; /* Màu chữ xanh lam */
+}
+.language-toggle {
+  margin-left: auto; /* Đẩy nút chọn ngôn ngữ sang phải */
+}
+/* Footer */
+.footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 1000;
+  border: none;
+  outline: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+#back-to-top:hover {
+  background-color: #0056b3;
+}
